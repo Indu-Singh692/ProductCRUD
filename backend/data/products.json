@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1775916159902,
+    "name": "iphone",
+    "price": 86000,
+    "category": "electronic",
+    "brand": "Apple",
+    "variant": "256GB",
+    "image": "1775916159856.mp4"
+  },
+  {
+    "id": 1775916182033,
+    "name": "iphone 13",
+    "price": 35000,
+    "category": "electronic",
+    "brand": "Apple",
+    "variant": "256GB",
+    "image": "1775916181980.mp4"
+  },
+  {
+    "id": 1775916829211,
+    "name": "",
+    "price": 0,
+    "category": "",
+    "brand": "",
+    "variant": "",
+    "image": null
+  },
+  {
+    "id": 1775917899068,
+    "name": "vivoy15",
+    "price": 25000,
+    "category": "electronocs",
+    "brand": "vivo",
+    "variant": "64gb",
+    "image": "1775917899023.mp4"
+  },
+  {
+    "id": 1775929656357,
+    "name": "oranges",
+    "price": 60,
+    "category": "Fruits",
+    "brand": "",
+    "variant": "12pice",
+    "image": "1775929656346.jpg"
+  },
+  {
+    "id": 1775934229225,
+    "name": "hbj",
+    "price": 5698,
+    "category": "n",
+    "brand": "kjnkj",
+    "variant": "nb n",
+    "image": "1775934229211.webp"
+  }
+]
