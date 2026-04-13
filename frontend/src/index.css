@@ -1,172 +1,98 @@
-/* 🔹 Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #2c3e50;
-  color: white;
-  padding: 15px 20px;
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Amazon Ember', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #EAEDED;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
   border-radius: 10px;
 }
 
-.logo {
-  margin: 0;
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
 }
 
-.nav-links button {
-  background-color: #3498db;
-  margin-left: 10px;
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
-
-
-/* Grid View */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+/* Selection Color */
+::selection {
+  background: #FEBD69;
+  color: #111;
 }
 
-.card {
-  border: 1px solid #ccc;
-  padding: 10px;
+/* Focus Styles */
+:focus {
+  outline: none;
 }
 
-/* List View */
-.list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+:focus-visible {
+  outline: 2px solid #FEBD69;
+  outline-offset: 2px;
 }
 
-.list-card {
-  display: flex;
-  border: 1px solid #ccc;
-  padding: 10px;
-  gap: 20px;
-}
-
-/* 🔹 Global Styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f6fa;
-  margin: 0;
-  padding: 20px;
-}
-
-/* 🔹 Heading */
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* 🔹 Controls (search + filters) */
-input, select {
-  padding: 8px;
-  margin: 10px 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* 🔹 Buttons */
+/* Button Reset */
 button {
-  padding: 8px 12px;
-  margin: 5px;
+  background: none;
   border: none;
-  background-color: #3498db;
-  color: white;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #2980b9;
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* 🔹 Grid Layout */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-top: 20px;
+/* Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* 🔹 Card (Grid) */
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
+/* Utility Classes */
+.text-center {
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* 🔹 Image */
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 2rem; }
 
-/* 🔹 List Layout */
-.list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* 🔹 List Card */
-.list-card {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-  gap: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* 🔹 List Image */
-.list-card img {
-  width: 120px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* 🔹 Product Text */
-.card h3, .list-card h3 {
-  margin: 10px 0;
-}
-
-.card p, .list-card p {
-  margin: 5px 0;
-  color: #555;
-}
-
-/* 🔹 Pagination */
-div button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-
-
-
-/* 🔹 Responsive */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .list-card {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }

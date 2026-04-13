@@ -1,16 +1,67 @@
-# React + Vite
+# Product Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application built with Vite for managing products. This frontend connects to a Node.js backend API to perform CRUD operations on products.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- View all products in a grid layout
+- Search products by name
+- Filter by category and brand
+- Sort by name or price
+- Add new products with image upload
+- Edit existing products
+- Delete products
+- Responsive design
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v14 or higher)
+- Backend server running on http://localhost:5001
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+The application will be available at `http://localhost:5173`
+
+### Backend Setup
+
+Make sure the backend server is running on port 5001. The frontend is configured to proxy API requests to the backend.
+
+To start the backend:
+```bash
+cd backend
+npm install
+npm start
+```
+
+## API Endpoints
+
+The frontend interacts with the following backend endpoints:
+
+- `GET /api/products` - Fetch products with optional query parameters
+- `POST /api/products` - Create a new product
+- `PUT /api/products/:id` - Update an existing product
+- `DELETE /api/products/:id` - Delete a product
+
+## Technologies Used
+
+- React 19
+- Vite
+- Axios for API calls
+- CSS for styling
