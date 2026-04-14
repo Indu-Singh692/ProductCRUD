@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
 
+const API = import.meta.env.VITE_BACKEND_URL;
+
 function App() {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -32,7 +34,7 @@ function App() {
       if (brand) params.append('brand', brand)
       if (sort) params.append('sort', sort)
 
-      const response = await axios.get(`/api/products?${params}`)
+      const response = await axios.get(`${API}/api/products?${params}`)
       setProducts(response.data.data)
       setLoading(false)
     } catch (error) {
@@ -54,27 +56,29 @@ function App() {
     }
 
     try {
-      if (editingProduct) {
-        await axios.put(`/api/products/${editingProduct.id}`, data, {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        })
-      } else {
-        await axios.post('/api/products', data, {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        })
-      }
-      fetchProducts()
-      resetForm()
-      setShowForm(false)
-    } catch (error) {
-      console.error('Error saving product:', error)
-    }
+  if (editingProduct) {
+    await axios.put(`${API}/api/products/${editingProduct.id}`, data, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    });
+  } else {
+    await axios.post(`${API}/api/products`, data, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    });
+  }
+
+  fetchProducts();
+  resetForm();
+  setShowForm(false);
+
+} catch (error) {
+  console.error('Error saving product:', error);
+}
   }
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        await axios.delete(`/api/products/${id}`)
+        await axios.delete(`${API}/api/products/${id}`)
         fetchProducts()
       } catch (error) {
         console.error('Error deleting product:', error)
@@ -330,7 +334,7 @@ function App() {
                   <div className="product-image-container">
                     {product.image ? (
                       <img 
-                        src={`http://localhost:5001/uploads/${product.image}`} 
+                        src={`${API}/uploads/${product.image}`} 
                         alt={product.name}
                         className="product-image"
                       />

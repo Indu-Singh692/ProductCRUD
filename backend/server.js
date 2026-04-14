@@ -1,12 +1,29 @@
 const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+
+dotenv.config();
+
 const app = express();
 
-const productRoutes = require('./routes/productRoutes');
+// Middleware
 app.use(express.json());
 
-app.use('/api',productRoutes);
-app.use('/uploads',express.static('uploads'));
+// CORS (frontend connect)
+app.use(cors({
+    origin: process.env.FRONTEND_URL
+}));
 
-app.listen(5001,()=>{
-    console.log("Server running on http://localhost:5001");
-})
+// Routes
+const productRoutes = require('./routes/productRoutes');
+app.use('/api', productRoutes);
+
+// Static folder for images
+app.use('/uploads', express.static('uploads'));
+
+// Use PORT from .env
+const PORT = process.env.PORT ;
+
+app.listen(PORT, () => {
+    console.log(`Server running on ${process.env.BACKEND_URL}`);
+});
