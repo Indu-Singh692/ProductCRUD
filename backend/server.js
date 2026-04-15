@@ -22,7 +22,7 @@ app.use('/api', productRoutes);
 app.use('/uploads', express.static('uploads'));
 
 // Use PORT from .env
-const PORT = process.env.PORT ;
+const PORT = process.env.PORT||5000 ;
 
 app.listen(PORT, () => {
     console.log(`Server running on ${process.env.BACKEND_URL}`);
