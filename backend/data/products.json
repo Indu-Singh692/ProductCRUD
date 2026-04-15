@@ -1,29 +1,11 @@
 [
   {
-    "id": 1775916159902,
-    "name": "iphone",
-    "price": "86000",
-    "category": "electronic",
-    "brand": "Apple",
-    "variant": "256GB",
-    "image": "1776093704060.jpg"
-  },
-  {
-    "id": 1776093681992,
-    "name": "iphone 258",
-    "price": "52525",
-    "category": "electronics",
-    "brand": "phone ",
-    "variant": "256gb",
-    "image": "1776093681962.jpg"
-  },
-  {
-    "id": 1776188400747,
-    "name": "iphoone 13",
-    "price": 12222,
-    "category": "electronics",
-    "brand": "Apple",
-    "variant": "256GB",
-    "image": "1776188400743.jpg"
+    "id": 1776267034262,
+    "name": "mobile phone",
+    "price": 56000,
+    "category": "Electronics",
+    "brand": "vivo",
+    "variant": "128GB",
+    "image": "1776267033770.jpg"
   }
 ]
